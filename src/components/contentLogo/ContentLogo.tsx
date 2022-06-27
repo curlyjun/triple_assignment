@@ -1,16 +1,11 @@
-import { useEffect, useState } from 'react'
-
 import * as Styled from './ContentLogo.style'
 
+import { useFadeIn } from '@hooks/useFadeIn'
+
 const ContentLogo = () => {
-  const [state, setState] = useState('fade-enter')
-
-  useEffect(() => {
-    setState('fade-enter-active')
-  }, [])
-
+  const fadeInClassName = useFadeIn()
   return (
-    <Styled.ContentLogoWrapper className={state}>
+    <Styled.ContentLogoWrapper className={fadeInClassName}>
       2021년 12월 기준
     </Styled.ContentLogoWrapper>
   )
