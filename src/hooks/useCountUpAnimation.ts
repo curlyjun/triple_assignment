@@ -1,14 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-/**
- *
- * @param progress 진척도 (0 ~ 1)
- * @returns easeOutQuint 처리된 진척도
- * @ref https://easings.net/ko#easeOutQuint,
- */
-const easeOutQuint = (progress: number) => {
-  return 1 - Math.pow(1 - progress, 5)
-}
+import { easeOutQuint } from '@utils/easing'
 
 /**
  * @desc `ease-out`이 적용된 숫자 증가 애니메이션 커스텀 훅
