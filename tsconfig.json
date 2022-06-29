@@ -19,6 +19,7 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@templates/*": ["src/templates/*"],
+      "@utils/*": ["src/utils/*"],
       "@styles/*": ["styles/*"]
     }
   },
