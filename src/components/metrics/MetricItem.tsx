@@ -1,4 +1,4 @@
-import { memo, useRef } from 'react'
+import { memo } from 'react'
 
 import * as Styled from './MetricItem.style'
 
@@ -15,13 +15,12 @@ const MetricItem = ({
   strongString,
   remainedString,
 }: MetricItemProps) => {
-  const ref = useRef<HTMLSpanElement>(null)
-  useCountUpAnimation(ref, count, 2000)
+  const currentCount = useCountUpAnimation(count, 2000)
 
   return (
     <Styled.MetricItemWrapper>
       <strong>
-        <span ref={ref} />
+        <span>{currentCount}</span>
         {strongString}
       </strong>
       {remainedString}
