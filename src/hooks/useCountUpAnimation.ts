@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-import { easeOutQuint } from '@utils/easing'
+import { easeOutCubic } from '@utils/easing'
 
 /**
  * @desc `ease-out`이 적용된 숫자 증가 애니메이션 커스텀 훅
@@ -19,7 +19,7 @@ export const useCountUpAnimation = (maxCount: number, duration: number) => {
       }
 
       const runtime = time - startTime.current
-      const easeOutProgress = easeOutQuint(runtime / duration)
+      const easeOutProgress = easeOutCubic(runtime / duration)
 
       if (runtime <= duration) {
         setCurrentCount(Math.round(easeOutProgress * maxCount).toString())
