@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const AwardsWrapper = styled.div`
   margin: 50px 0px 140px 623px;

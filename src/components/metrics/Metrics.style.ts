@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const MetricsWrapper = styled.div`
   margin-left: 623px;

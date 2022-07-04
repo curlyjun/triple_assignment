@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 export const MetricItemWrapper = styled.div`
   color: rgb(58, 58, 58);
