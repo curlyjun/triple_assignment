@@ -1,17 +1,8 @@
 import styled from '@emotion/styled'
 
-export const MetricsWrapper = styled.div`
+import { FadeInWrapper } from '@styles/common.style'
+
+export const MetricsWrapper = styled(FadeInWrapper)`
   margin-left: 623px;
   padding-top: 150px;
-
-  &.fade-enter {
-    opacity: 0;
-    transform: translateY(5%);
-  }
-
-  &.fade-enter-active {
-    opacity: 1;
-    transform: translateY(0%);
-    transition: all 700ms ease-in-out 100ms;
-  }
 `

@@ -1,13 +1,9 @@
 import AwardItem from './AwardItem'
 import * as Styled from './Awards.style'
 
-import { useFadeIn } from '@hooks/useFadeIn'
-
 const Awards = () => {
-  const fadeInClassName = useFadeIn(200)
-
   return (
-    <Styled.AwardsWrapper className={fadeInClassName}>
+    <Styled.AwardsWrapper fadeInDelay={200}>
       <AwardItem backgroundImgUrl="images/play-store2x.png">
         2018 구글 플레이스토어
         <br />

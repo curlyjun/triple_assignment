@@ -9,7 +9,7 @@ import { easeOutQuint } from '@utils/easing'
  * @ref https://medium.com/burst/understanding-animation-with-duration-and-easing-using-requestanimationframe-7e3fd1688d6c
  */
 export const useCountUpAnimation = (maxCount: number, duration: number) => {
-  const [count, setCount] = useState<string>()
+  const [currentCount, setCurrentCount] = useState<string>()
   const startTime = useRef<number | null>(null)
 
   const animate = useCallback(
@@ -22,7 +22,7 @@ export const useCountUpAnimation = (maxCount: number, duration: number) => {
       const easeOutProgress = easeOutQuint(runtime / duration)
 
       if (runtime <= duration) {
-        setCount(Math.round(easeOutProgress * maxCount).toString())
+        setCurrentCount(Math.round(easeOutProgress * maxCount).toString())
         requestAnimationFrame(animate)
       }
     },
@@ -37,5 +37,5 @@ export const useCountUpAnimation = (maxCount: number, duration: number) => {
     }
   }, [animate])
 
-  return count
+  return currentCount
 }
