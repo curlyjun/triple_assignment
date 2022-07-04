@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-import { FadeInWrapper } from '@styles/common.style'
+import { FadeInWrapper } from '@styles/common'
 
 export const ContentLogoWrapper = styled(FadeInWrapper)`
   position: absolute;
